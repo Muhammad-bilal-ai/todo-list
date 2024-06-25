@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoList from "./components/TodoList";
+import AddTodo from "./components/AddTodo";
+import Filter from "./components/Filter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto p-4 flex-auto">
+      <h1 className="text-2xl font-bold mb-4">Todo List</h1>
+      <AddTodo />
+      {/* <Filter /> */}
+      <TodoList />
     </div>
   );
 }
